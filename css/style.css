@@ -1,0 +1,130 @@
+
+h4{
+  font-family: 'Ubuntu', sans-serif;
+}
+.fa{
+  font-size: 24px;
+  margin-left: 10px;
+  color: #212121;
+  margin-top: 5px;
+}
+.custom-design{
+margin-top: 7px;
+margin-bottom: 7px;
+}
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+blockquote{
+  border-left-color: rgb(0, 0, 0);
+}
+img .centerimg{
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+p {
+  line-height: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+.yees{
+  position: fixed;
+  box-shadow: none;
+  background-color:white;
+  z-index: 10;
+}
+h5{
+  font-family: 'Roboto Slab', serif;
+}
+
+.custom-nav{
+  width: 90%;
+margin-left: 70px;
+margin-right:70px;
+}
+
+.sidenav-trigger {
+  color: #212121;
+}
+.custom1{
+    padding-bottom: 100px;
+
+}
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+.custom{
+width: 90%;
+margin-left: 70px;
+margin-right:70px;
+}
+
+
+img.ar-logo{
+  width:40px; margin-top:10px;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 993px) {
+  #index-banner .section {
+    top: 0;
+  }
+
+  .custom{
+width: 100%;
+margin-left: 0px;
+margin-right: 0px;
+}
+.custom-nav{
+  width: 100%;
+margin-right:0px;
+margin-left: 0px;
+}
+.coming-soon{
+  border-style: dashed;
+  border-width: 2px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+
+
+img.ar-logo{
+  width:40px;
+   margin-top:10px;
+}
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+footer.page-footer {
+  margin: 0;
+
+background-color:#dbe2ef;
+}
+.burger-icon{
+font-size: 55px;
+color: #212121;
+}
