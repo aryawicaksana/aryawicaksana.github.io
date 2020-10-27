@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>How Machine Learn?.Ar</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+  <link rel = "icon" href = "img/favicon.ico" type = "image/x-icon"> 
+  <title>How machine learn</title>
+  
+  <!-- CSS  -->
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  <!-- ICON  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/69242ed96a.js" crossorigin="anonymous"></script>
+  
+  <!-- Font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+ <!-- NAVBAR  -->
+  <div  class="navbar-fixed ">
+    <nav id="navbar" class="white" role="navigation">
+      <div class="nav-wrapper container custom-nav">
+        <a id="logo-container" href="index2.html" class="brand-logo"><img class="ar-logo" src="img/icon.svg"></a>
+        <ul class="right hide-on-med-and-down">
+          <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
+        </ul>
+
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </div>
+  <!-- SIDENAV  -->
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="img/background.jpg">
+        </div>
+        <!--a href="#user"><img class="circle" src="images/yuna.jpg"></a-->
+        <a href="#!"><span class="white-text name">Arya Wicaksana</span></a>
+        <a href="#!"><span class="white-text email">aryawicaksana40@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a class="subheader">Tool</a></li>
+    <li><a class="sidenav-close waves-effect modal-trigger" href="#ipcalc">IP Calculator</a></li>
+    <li style="color: rgba(0, 0, 0, 0.54);">&nbsp &nbsp &nbsp &nbsp Coming Soon</li>
+    <li class="divider"></li>
+    <li><a class="subheader">Blog</a></li>
+    <li><a class="waves-effect" href="how-machine-learn-%3F.html">How do machines learn?</a></li>
+    <li style="color: rgba(0, 0, 0, 0.54);">&nbsp &nbsp &nbsp &nbsp Coming Soon</li>
+    
+  </ul>
+  <!--IP Calc-->
+   <div id="ipcalc" class="modal">
+    <nav class="grey darken-3" style="padding-right: 10px;">
+    <div class="nav-wrapper">
+      <a class="brand-logo center grey-text">IP Calculator</a>
+      <ul id="nav-mobile" class="right">
+        <li><a class="modal-close btn-floating btn-small red"><i class="material-icons"></i></a></li>
+      </ul>
+      <div class=" col s3">  </div>
+      
+    </div>
+    </nav>
+    <div class="modal-content">
+       <div class="row">
+        <div class="input-field col s7">
+          <input id="ip" type="text" class="validate" required>
+          <label for="ip">IP address</label>
+        </div>
+        <div class="input-field col s3">
+          <input id="subnet" type="text" class="validate" required>
+          <label for="subnet">Subnet</label>
+        </div>
+        <div class="btn col s2 waves-effect" style="margin-top: 27px;">
+          <div onclick="calculate()"> compute </div>
+        </div>
+
+        <div class="col s12">
+          <h6> Result </h6>
+        </div>
+        <div id="err_inv" class="col s12 center-align red-text hide"><i class="large material-icons">sentiment_very_dissatisfied</i><br>Something went wrong! <br> Try checking your ip address or subnetmask</div>
+        <div id="result" class="col s12 hide">
+
+          <div class="input-field col s6">
+            <input disabled value="p" id="ip_res" type="text" class="validate">
+            <label for="ip_res">IP Address</label>
+          </div>
+          <div class="input-field col s6">
+            <input disabled value="p" id="ipbinary_res" type="text" class="validate">
+            <label for="ipbinary_res">IP Binary</label>
+          </div>
+          
+          <div class="input-field col s6">
+            <input disabled value="pll" id="subnet_res" class="validate">
+            <label class="active" for="subnet_res">Subnetmask</label>
+          </div>
+          <div class="input-field col s6">
+            <input disabled  value="p" id="maskbinary_res" class="validate">
+            <label class="active" for="maskbinary_res">Mask Binary</label>
+          </div>
+
+          <div class="input-field col s12">
+            <input disabled value="192.168.1.1" id="class_res"  class="validate">
+            <label class="active" for="class_res">Class</label>
+          </div>
+          <div class="input-field col s12">
+            <input disabled value="192.168.1.1" id="hostnum_res" class="validate">
+            <label class="active" for="hostnum_res">Available Host</label>
+          </div>
+          <div class="input-field col s12">
+            <input disabled value="192.168.1.1" id="net_res" class="validate">
+            <label class="active" for="net_res">Net Address</label>
+          </div>
+          <div class="input-field col s12">
+            <input disabled value="192.168.1.1" id="range_res" class="validate">
+            <label class="active" for="range_res">Range</label>
+          </div>
+          <div class="input-field col s12">
+            <input disabled value="192.168.1.1" id="bc_res" class="validate">
+            <label class="active" for="bc_res">Broadcast Address</label>
+          </div>
+           <div class="input-field col s12">
+            <input disabled value="192.168.1.1" id="wildcard_res" class="validate">
+            <label class="active" for="wildcard_res">Wildcard Address</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Toxicity-->
+      <div id="Toxicity" class="modal">
+    <nav class="grey darken-3" style="padding-right: 10px;">
+    <div class="nav-wrapper">
+      <a class="brand-logo center grey-text">Toxicity Estimator</a>
+      <ul id="nav-mobile" class="right">
+        <li><a class="modal-close btn-floating btn-small red"><i class="material-icons"></i></a></li>
+      </ul>
+      <div class=" col s3">  </div>
+      
+    </div>
+    </nav>
+    <div class="modal-content">
+       <div class="row">
+        <div class="input-field col s10">
+          <input placeholder="i.e.'Im Very Happy'" id="sentiment" type="text" class="validate">
+          <label for="sentiment"></label>
+        </div>
+        <div class="btn col s2 waves-effect" style="margin-top: 27px;">
+          <div onclick="classify()"> classify </div>
+        </div>
+
+        <div class="col s12">
+          <h6> Result </h6>
+        </div>
+        <div id="err_inv" class="col s12 center-align red-text "><i class="large material-icons">sentiment_very_dissatisfied</i><br>Something went wrong! <br> Try checking your ip address or subnetmask</div>
+        <div id="result" class="col s12 hide">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Hello  -->
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col l12">
+          <h3>How do Machines Learn ?</h3>
+          <img class="responsive-img center" src="https://www.ceralytics.com/wp-content/uploads/2019/08/machine-learning-featured.jpg" width="1000">
+          <p></p>
+          <h4>Introductions</h4>
+          <h5>Recently, there has been a lot of fuss about the word Learning. We always hear about machine learning, deep learning, learning algorithms, etc. But what does this really mean? Did scientists find a way to create a brain-like component and implement it inside machines? Is it just a marketing word used to sell software and services? Are machines going to take over the world? Or what on earth is this about?</h5>
+          <br>
+          <h5>
+          	Well… do not worry, we are still not there… yet! In this article I will introduce what learning really is, and how scientists teach computers to achieve human-like tasks, or in some cases, even outperform humans. This article is completely technical-free. It is written so that anyone from any domain will be able to grasp the idea. Therefore, the concept will be explained in an oversimplified way. Other concept-heavy topics will be discussed in future articles.
+          </h5>
+          <h4 class="center">&bull;
+				&bull;
+				&bull;</h4>
+          <h4>Why do we need learning?</h4>
+          <h5>Before learning took place, problem-solving tasks relied on writing algorithms. An algorithm is simply a set of rules that takes an input and returns an output as a solution for the problem.</h5>
+          <br>
+          <h5>
+          	Consider the following: Given a list of numbers, you are asked to sort them in an increasing order. This problem is solved by algorithms. In fact, there are a lot of algorithms to solve this task. They work by taking the list, applying some rules and manipulations, and returning the list in a sorted way. This problem and other similar ones were “somehow” easy for computer scientists. They only had to think and come up with an algorithm to solve a given task.
+          </h5>
+          <br>
+          <h5>
+          	On the other hand, some problems were not so easy to solve by algorithms. People started to ask more from computers. They wanted the machine to have super abilities of solving very hard tasks. Tasks that scientists completely had no idea how to program. For example: How is it possible to write an algorithm, that takes an image of an animal and outputs the type of it? This is a very easy task for humans, but solving it with algorithms is a very complex mission if not impossible. Humans know how to classify animal photos, but they do not know how to describe the steps they take to reach the answer. Here an important question arises. How to solve problems that even humans do not know how to describe?
+          </h5>
+          <blockquote>
+          	<h4>"Learning comes to the rescue! Humans learn from experience and so do machines."</h4>
+          </blockquote>
+          <br>
+          <h5>
+          	Imagine a room with a nice fireplace and a small child playing around. The child’s mind is completely fresh and has no idea what a fireplace is. He always wants to explore and learn stuff. He sees a red flame, for him it is something new, fascinating, and interesting to investigate. In his mind, its like let us go and touch it! Unfortunately, here comes the pain, and the child learns from the harmful experience not to touch fire in the future. Here I emphasize on experience, because this is what learning is about.
+          </h5>
+
+
+          <h4 class="center">&bull;
+				&bull;
+				&bull;</h4>
+          <h4>Types of learning</h4>
+          <h5>The idea behind learning is very simple and intuitive. To make a computer learn a task, we give it a set of questions followed by an answer. Note that we do not know how to describe the steps to go from a question to an answer, so we assign this task to our poor buddy — the machine. This is one category of learning named: Supervised Learning. Example: consider a program that takes an image and answers whether it contains a cat or not. The way of teaching this program is by giving it a lot of images labeled as “is cat” or “is not a cat”. The machine’s responsibility is to learn a way to go from an input to a label. How? we will see an example later.</h5>
+          <h5>
+          	There are other categories such as Unsupervised Learning where we do not give the answer to the questions, and the model has to find a way to find it. There is Reinforcement Learning which is like the one used in video games where the model learns to reach a high score by choosing the best actions and learning from bad ones. In order to keep this article simple, I will not get into details, but I guess you got the general idea.
+          </h5>
+          <h4 class="center">&bull;
+				&bull;
+				&bull;</h4>
+          <h4>How it works ?</h4>
+          <h5>It is time to solve the mystery and know the magic behind learning. We will illustrate the idea with a very simple problem. Let us say you want to start a new career in selling old cars. Unfortunately, your experience is very limited in this domain making it difficult to assign prices.</h5>
+          <h5>
+          	To solve this issue, you go around and collect the following information from a fellow car dealer:
+          </h5>
+          <h5>
+          	<ul>
+          		<li>
+          			horsepower
+          		</li>
+          		<li>
+          			fuel type
+          		</li>
+          		<li>
+          			miles per gallon (mpg)
+          		</li>
+          		<li>
+          			number of doors
+          		</li>
+          		<li>
+          			and most importantly the selling price.
+          		</li>
+          	</ul>
+          </h5>
+          <h5>
+          	This is considered as your experience or background knowledge, and your goal is to learn from it.
+For the sake of simplicity, we will take the mpg first, and we will add the other features later. Now, let us start thinking. The price has to have a relation with the mpg. Let us draw a graph that shows the variation of price with respect to mpg:
+          </h5>
+          <img src="https://miro.medium.com/max/439/1*xgaimXlscLXnzybxMxtOQA.png">
+          <p></p>
+          <h5>
+          	The graph shows that the more the mpg, the cheaper is the car. Maybe this is because cars with more mpgs are more economic, thus less expensive than the strong cars.
+          	<br>
+Now we have a base solution, when a new car with similar mpg comes, we simply assign the same price as before. But, what if we got new car with an unseen value? Here is the main goal behind learning, we want to learn how the values are calculated…
+          </h5>
+          <h5>
+			To do so, we start by suggesting a possible calculation model. We propose that there is a linear relationship between the two. This relationship can be described as a straight line as shown in the image below:
+          	
+          </h5>
+          <img src="https://miro.medium.com/max/451/1*l8X4kdsQFLk98OgC9kOKCg.png">
+          <h5>
+          	We use this line as our reference, when we get a new value we map it to the line and get our price. For example: when we get a car with 40 mpg we assume that the price is around 6000$. Fair enough…
+
+          </h5>
+          <img src="https://miro.medium.com/max/451/1*DCWLrtP-UIl4bLVaWYwZng.png">
+          <h5>
+          	But how to find this straight line? A straight line is represented with the following equation:
+          	<br><br>
+price = a + b * mpg
+<br><br>
+We know the price and the mpg from our dataset, but what are a and b?In simple words, a and b are the parameters of the straight line. Different values of a and b mean different straight lines.
+          </h5>
+
+          <h4 class="center">&bull;
+				&bull;
+				&bull;</h4>
+          <h4>
+          	How to find which line is the best?
+          </h4>
+          <h5>
+          	The best line is the one that better fits the data points. Therefore, the most important question is how to choose the best values of a and b to get the best fitting line? Why this question is so important? Well, because this is all what a machine has to learn… This is the very core of every learning model.
+          	<br><br>
+The process is like tuning the keys of a guitar. We start by rotating the different keys until we get the perfect tone.
+          </h5>
+          <img class="centerimg" src="https://miro.medium.com/max/430/1*1AC92s9V6uH-5h8ZH-bR1w.png">
+          <h5>
+          	In our example it goes like this… We ask the machine to try different values for a and b, then compare the price we got with our previously known data. e.g. we know from our data, when mpg = 30, the price =1390. We calculate the predicted price for all the prices, and compare them with the actual one.
+          </h5>
+          <img class="responsive-img" src="https://assets.newatlas.com/dims4/default/2249b42/2147483647/strip/true/crop/855x570+0+255/resize/1200x800!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fpolytune-guitar-tuner-3.jpeg">
+          <h5>
+          	If the prices for a given a and b differ a lot, we change a and b to reach a better estimate. We keep going like this until the model finds the best settings. Fortunately, there are some algorithms that speed up and reduce the search space for finding the best parameters e.g. Gradient Descent.
+          	<br><br>
+Fitting a straight line with a single feature is not that hard. It is like a blind person on a mountain, searching for a ball down the hill. But consider adding the other features:
+<br><br>
+price = a + b * miles + c * horsepower + d * fuel type + e * number of doors
+<br><br>
+Here we are no more in a 2-dimensional space, and our minds are not even able to imagine the situation. All of this and we are still using a linear representation for our model. What about more complex models? e.g. fit a polynomial line instead of a straight line. More complex models require fitting a huge number of parameters. The learning process in this case, will take a lot of computations and time. Well, how complex we need to define our model? This completely depends on the data, and the experience of the machine learning engineer.
+          </h5>
+
+          <h4 class="center">&bull;
+				&bull;
+				&bull;</h4>
+          <h4>Final Thoughts</h4>
+          <h5>
+          	I hope this article solved the mystery behind learning. Learning is all about discovering the best parameter values (a, b, c …) for a given model. These values enable the model to output good results based on previous.
+          	<br><br>
+Machine learning is now possible due to the advances in computer hardware, and the drop in their prices. There are a lot of machine learning models. They differ with their level of complexity, and the tasks they are able to solve. The one we introduced in this article is called Linear Regression, one of the most simple — yet very powerful — algorithms.
+          </h5>
+
+          <h4 class="center">&bull;
+				&bull;
+				&bull;</h4>
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <footer class="page-footer grey darken-4">
+    <div>
+      
+      <div class="row">
+        <div class="col l10 s12">
+          <a style="margin-left: 70px;" id="logo-container" class="brand-logo"><img class="ar-logo" style="width: 80px; filter: invert(100%) sepia(10%) saturate(0%) hue-rotate(64deg) brightness(104%) contrast(104%)"  src="img/icon.svg"></a>
+        </div>
+      </div>
+    
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+      Made with<a class="fa fa-heart" style="color: red;"></a> by <a class="brown-text text-lighten-3" href="#">Arya Wicaksana</a>
+      </div>
+    </div>
+  </footer>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+<script type="text/javascript">
+	window.onscroll = function() {scrollFunction()};
+
+function scrollFunction(){myFunction()}; 
+
+ var nav = document.getElementById("navbar")
+function myFunction() {
+  if (window.pageYOffset > 1) {
+    nav.classList.add("z-depth-1");
+  } else {
+    nav.classList.remove("z-depth-1");
+
+
+  }
+}
+</script>
+</body>
+</html>
