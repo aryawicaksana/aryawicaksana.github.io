@@ -25,10 +25,8 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 24px;
 	color: #212121;
 font-style: normal;
-margin-right: 8px;
 }
 
 .flaticon-stamp:before { content: "\f100"; }
